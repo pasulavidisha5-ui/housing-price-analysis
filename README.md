@@ -22,4 +22,19 @@ This project analyzes housing price data using Python to understand how area, be
 - graph2.png
 
 ## 👩‍💻 Author
-Your Name
+P Vidisha
+## 🚀 Live House Price Predictor
+
+You can try the live app here:
+
+👉 [Click Here to Use the App](PASTE_YOUR_STREAMLIT_LINK)
+
+---
+
+## 🔮 Sample Input
+Area = 2000  
+Bedrooms = 3  
+Bathrooms = 2  
+
+## 💰 Output
+Estimated Price = 6017974
