@@ -1,22 +1,30 @@
 import pandas as pd
-import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
 
 # Load dataset
 data = pd.read_csv("housing_data.csv", skiprows=1)
 data.columns = ["Area", "Bedrooms", "Bathrooms", "Price"]
 
-print(data.head())
+# Features and target
+X = data[["Area", "Bedrooms", "Bathrooms"]]
+y = data["Price"]
 
-# Scatter Plot
-plt.scatter(data['Area'], data['Price'])
-plt.xlabel("Area")
-plt.ylabel("Price")
-plt.title("Area vs Price")
-plt.show()
+# Train model
+model = LinearRegression()
+model.fit(X, y)
 
-# Bar Graph
-plt.bar(data['Bedrooms'], data['Price'])
-plt.xlabel("Bedrooms")
-plt.ylabel("Price")
-plt.title("Bedrooms vs Price")
-plt.show()
+print("Model trained successfully!")
+
+# User input
+area = int(input("Enter Area: "))
+bedrooms = int(input("Enter Bedrooms: "))
+bathrooms = int(input("Enter Bathrooms: "))
+
+# Proper input format (no warning)
+input_data = pd.DataFrame([[area, bedrooms, bathrooms]], 
+                          columns=["Area", "Bedrooms", "Bathrooms"])
+
+# Prediction
+prediction = model.predict(input_data)
+
+print("Estimated House Price:", int(prediction[0]))
