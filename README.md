@@ -27,9 +27,7 @@ P Vidisha
 
 You can try the live app here:
 
-👉 [Click Here to Use the App](PASTE_YOUR_STREAMLIT_LINK)
-
----
+👉 [Click Here to Use the App](https://housing-price-analysis-cj5dplci7schlk7ycgqk4a.streamlit.app/)
 
 ## 🔮 Sample Input
 Area = 2000  
